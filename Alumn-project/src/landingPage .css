@@ -1,0 +1,110 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+.pure {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.pure img {
+  width: 100%;
+  height: 600px;
+  display: block;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+}
+
+.overlay-text {
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-weight: 900;
+  font-size: 33px;
+  line-height: 56px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.overlay-text span {
+  display: inline-block;
+  color: #9333ea; /* Purple color to make it stand out */
+  animation: fadeInOut 6s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 30% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 1;
+  }
+  70%, 100% {
+    opacity: 1;
+  }
+}
+
+.pure span {
+  color: rgba(139, 92, 246, 1);
+}
+
+.pure p{
+  color: rgba(255, 255, 255, 1);
+  font-family: Montserrat;
+font-weight: 500;
+font-style: Medium;
+font-size: 14px;
+padding: 18px;
+letter-spacing: 1%;
+text-align: center;
+
+}
+.pure button{
+  background-color: rgba(139, 92, 246, 1);
+  color: white;
+  font-weight: 500;
+  margin-top: 30px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.backgroundColor {
+  background: rgba(15, 15, 35, 1);
+}
+
+.firstText {
+  color: rgba(255, 255, 255, 1);
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style: Bold;
+  font-size: 27px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  padding: 18px;
+}
+
+.secondText {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 13px;
+ padding: 25px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: rgba(209, 213, 219, 1);
+}
+
+.footerColor {
+  background-color: rgba(17, 24, 39, 1);
+}
