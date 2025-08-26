@@ -1,5 +1,4 @@
 import alumnPic from "./assets/Alumn logo.png";
-import vectorPic from "./assets/vector.png";
 import purePic from "./assets/pure background.png";
 import contactPic from "./assets/contact.png";
 import connectPic from "./assets/connect.png";
