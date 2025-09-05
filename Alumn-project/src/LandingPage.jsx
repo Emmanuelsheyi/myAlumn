@@ -10,11 +10,15 @@ import bulletPic from "./assets/bullet.png";
 import capPic from "./assets/cap.png";
 import searchPic from "./assets/search.png";
 import connectionPic from "./assets/connection.png";
-import "./landingPage .css"; // Assuming you have a CSS file for styles
+import "./landingPage.css"; 
+
 import { useState, useEffect } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+
 
 function LandingPage() {
   const [currentWord, setCurrentWord] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
   const words = ["Talent", "Project", "Collaboration"];
 
   useEffect(() => {
@@ -24,6 +28,7 @@ function LandingPage() {
 
     return () => clearInterval(interval);
   }, [words.length]);
+
 
   return (
     <div>
@@ -36,6 +41,7 @@ function LandingPage() {
           <div className="flex items-center space-x-4">
             <img src={alumnPic} alt="Alumn Logo" />
           </div>
+          {/* Desktop Nav */}
           <div className="hidden md:flex space-x-8">
             <a
               href="#about"
@@ -63,16 +69,62 @@ function LandingPage() {
             </a>
           </div>
           <div className="flex items-center space-x-4">
-            {/* <img src={vectorPic} alt="vector pic image" /> */}
-
+            {/* Hamburger Icon for Mobile */}
+            <button
+              className="md:hidden focus:outline-none"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Open Menu"
+            >
+              <GiHamburgerMenu size={28} />
+            </button>
             <a
               href="#join-waitlist"
-              className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 font-medium transition-colors"
+              className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 font-medium transition-colors hidden md:inline"
             >
               Join Waitlist
             </a>
           </div>
         </div>
+        {/* Mobile Menu */}
+        {menuOpen && (
+          <div className="md:hidden mt-4 bg-white rounded-lg shadow-lg p-4 space-y-4 z-50">
+            <a
+              href="#about"
+              className="block text-gray-600 hover:text-purple-600 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              About
+            </a>
+            <a
+              href="#works "
+              className="block text-gray-600 hover:text-purple-600 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              How it Works
+            </a>
+            <a
+              href="#features"
+              className="block text-gray-600 hover:text-purple-600 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a
+              href="#community"
+              className="block text-gray-600 hover:text-purple-600 font-medium"
+              onClick={() => setMenuOpen(false)}
+            >
+              Community
+            </a>
+            <a
+              href="#join-waitlist"
+              className="block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 font-medium transition-colors"
+              onClick={() => setMenuOpen(false)}
+            >
+              Join Waitlist
+            </a>
+          </div>
+        )}
       </div>
       {/* end of the navigation header */}
 
