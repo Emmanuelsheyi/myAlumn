@@ -139,7 +139,9 @@ function LandingPage() {
              Find teammates, share ideas, and
             build real-world experience. 
           </p>
-          <button>Join Waitlist</button>
+          <a href="#join-waitlist">
+            <button>Join Waitlist</button>
+          </a>
         </div>
       </div>
       {/* end of image section */}
@@ -458,11 +460,8 @@ function LandingPage() {
             />
             <select className="w-full px-4 py-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-purple-500">
               <option value="">I'm an Alumni/Builder/Talent/Institution/Employer</option>
-              <option value="alumni">Alumni</option>
-              <option value="builder">Builder</option>
-              <option value="talent">Talent</option>
+              <option value="alumni">Alumni/Builder/Talent</option>
               <option value="institution">Institution</option>
-              <option value="employer">Employer</option>
             </select>
             <button className="w-full bg-purple-600 text-white py-3 px-6 rounded-lg hover:bg-purple-700 transition-colors font-medium">
               Join the Waitlist
@@ -505,14 +504,7 @@ function LandingPage() {
                     How It Works
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    Community
-                  </a>
-                </li>
+            <q></q>
               </ul>
             </div>
 
@@ -528,14 +520,7 @@ function LandingPage() {
                     About
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-white text-sm transition-colors"
-                  >
-                    Contact
-                  </a>
-                </li>
+            
               </ul>
             </div>
           </div>
